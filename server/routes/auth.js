@@ -23,16 +23,4 @@ router.get('/cbAdfs', passport.authenticate('adfs'), (req, res) => {
   res.redirect('/')
 })
 
-router.get('/login-facebook', passport.authenticate('facebook'))
-
-router.get('/cbFacebook', passport.authenticate('facebook'), (req, res) => {
-  res.redirect('/')
-})
-
-router.get('/login-google', passport.authenticate('google'))
-
-router.get('/cbGoogle', passport.authenticate('google'), (req, res) => {
-  res.redirect('/')
-})
-
 module.exports = router
