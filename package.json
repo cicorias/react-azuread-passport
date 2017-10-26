@@ -1,0 +1,69 @@
+{
+  "author": {
+    "name": "Shawn Cicoria",
+    "email": "github@cicoria.com",
+    "url": "http://cicoria.com"
+  },
+  "bugs": {
+    "url": "https://github.com/cicorias/react-azuread-passport/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-azuread-passport",
+  "description": "Example of using React and Authorization Code Flow with Passport and Azure AD Strategy",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cicorias/react-azuread-passport",
+  "repository": {
+    "url": "https://github.com/cicorias/react-azuread-passport/issues"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^4.0.0-beta",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "express-session": "^1.15.4",
+    "jsonwebtoken": "^7.4.1",
+    "moment": "^2.18.1",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-azure-ad-oauth2": "0.0.4",
+    "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-transition-group": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-icons": "^2.2.5",
+    "react-router-dom": "^4.1.1",
+    "reactstrap": "^4.6.2"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.0",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0"
+  },
+  "scripts": {
+    "bundle": "npx cross-env NODE_ENV=development webpack",
+    "deploy": "npx cross-env NODE_ENV=production webpack",
+    "start": "npx nodemon index.js",
+    "start-strict": "npx nodemon --use_strict index.js"
+  }
+}
