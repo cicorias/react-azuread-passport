@@ -4,6 +4,39 @@
 
 This is an example of using React, Passport, and Azure Active Directory
 
+## Quick startup
+
+edit the `config.js` file in `./server/config/config.js`
+
+get a secret from the App Settings in AAD on Azure Portal and update in that file:
+`clientSecret: process.env.AAD_AUTH_CLIENTSECRET` or set the `ENV` variable.
+
+OR create a `.env` file with
+
+```
+AAD_AUTH_CLIENTSECRET=fuLat5eYB8NOT REAL=
+```
+
+### AAD App settings
+In the Azure AD App, ensure that the App has permissions to `Microsoft Graph`. Specifically under Delegated permissions - `Sign in and read user profile`.
+
+Also, ensure the Reply URLs contains `http://localhost:8080/auth/cbAdfs`
+
+
+
+No startup both watcher and nodemon for the server
+```
+npm i
+#the following command launches 2 concurrent processes - one is React's watch, the other id NODE js.
+# they are served from the SAME Origin so no CORS concerns.
+npm start
+open http://localhost:8080
+
+```
+
+Navigate to root, click on the big button - then once logged on click on your email in the upper right corner. This dumps the `jwt` that was supplied on logon.
+
+
 ## Features
 - Uses React for the SPA
 - Provide your Azure AD Application information in a `.env` file before running.
